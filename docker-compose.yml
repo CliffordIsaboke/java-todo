@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  alpine:
+    image: alpine
+    container_name: my_alpine_container
+    command: sh -c "while true; do echo 'Hello from Alpine!'; sleep 5; done"
+  busybox:
+    image: busybox
+    container_name: my_busybox_container
+    command: sh -c "while true; do echo 'Hello from Busybox!'; sleep 5; done"
+  redis:
+    image: redis
+    container_name: my_redis_container
+    ports:
+      - "6379:6379"
